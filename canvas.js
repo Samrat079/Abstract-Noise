@@ -1,3 +1,6 @@
+// canvas.js
+import { GradientEditor } from './gradient-editor.js';
+
 window.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("myWindow");
   const ctx = canvas.getContext("2d");
@@ -5,7 +8,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const width = canvas.width;
   const height = canvas.height;
-
 
   const imgData = ctx.createImageData(width, height);
   const data = imgData.data;
@@ -15,12 +17,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   let frame = 0;
 
-  function hsvToRgb(h, s, v) {
-    let f = (n, k = (n + h * 6) % 6) =>
-      v - v * s * Math.max(Math.min(k, 4 - k, 1), 0);
-    return [f(5) * 255, f(3) * 255, f(1) * 255];
-  }
-
+  // Initialize GradientEditor UI
+  const gradientEditor = new GradientEditor("gradient-editor");
 
   function animatedNoise() {
     const z = frame * zScale;
@@ -35,7 +33,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const value = simplex.noise3D(nx, ny, z);
         const normVal = (value + 1) / 2;
 
-        const [r, g, b] = hsvToRgb(normVal, 1, 1); 
+        const [r, g, b] = gradientEditor.getColorFromGradient(normVal);
 
         data[i]     = r;
         data[i + 1] = g;

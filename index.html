@@ -3,32 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samrat Noise</title>
+    <title>Abstract Noise</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="grapick.min.css">
 </head>
 <body>
     <div class="heading">
         <h1>
-            Noise
+            Abstract Noise
         </h1>
     </div>
     <div class="view">
         <canvas id="myWindow" width="400" height="225"></canvas>
         <div class="controls">
-            <div id="color-picker" style="width: 300px; height: 40px;"></div>
+            <div id="gradient-editor">
+                <div id="gradient-bar"></div>
+                    <input type="color" id="color-picker">
+                </div>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora beatae distinctio explicabo quisquam recusandae. Repellat error beatae in quas quisquam reiciendis, odit incidunt? Quasi unde, necessitatibus repudiandae nesciunt explicabo quis?
+                The above gradient picker edits the colors in the noise generation, to the right is the peak of the color value and the left is the trough. You can change the color of each stop by clicking the color picker below the gradient bar. Double clicking adds a new stop. Dragging the stop towards or away from other stops defines how steep is the gradient change. 
             </p>
         </div>
     </div>
     <div class="test2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim, sint id nemo similique dignissimos obcaecati cupiditate iure porro cumque, mollitia sequi aliquid ullam, illo non ipsum alias perferendis earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sint necessitatibus voluptatum quis repudiandae consequatur porro nostrum nam, esse, excepturi libero, voluptatibus corrupti. Error, ab provident. Veritatis numquam delectus dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dolore architecto facilis et, distinctio ratione eius hic assumenda dolorum nisi minima nam totam nobis ipsa, cumque odit ullam! Rerum, incidunt.
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque, ea nisi! Unde incidunt magni assumenda nostrum in omnis maiores exercitationem quasi pariatur, dolor ex, fugit, laudantium veniam modi. Reiciendis, atque!
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum temporibus, nam, corporis, non corrupti sapiente facilis quisquam eaque dolore enim fugit cumque reiciendis commodi esse. Laborum ad mollitia debitis architecto?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laudantium, ut quidem veritatis pariatur explicabo laboriosam debitis repellendus ipsam eius libero dolorum eligendi dolores culpa inventore! Commodi perferendis quam modi.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil enim, sint id nemo similique dignissimos obcaecati cupiditate iure porro cumque, mollitia sequi aliquid ullam, illo non ipsum alias perferendis earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
     </div>
-<script src="canvas.js"></script>
 <script src="simplex.js"></script>
+<script type="module" src="canvas.js"></script>
 </body>
 </html>

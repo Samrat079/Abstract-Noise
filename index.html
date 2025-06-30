@@ -13,7 +13,7 @@
         </h1>
     </div>
     <div class="view">
-        <canvas id="myWindow" width="400" height="225"></canvas>
+        <canvas id="myWindow" ></canvas>
         <div class="controls">
             <div id="gradient-editor">
                 <div id="gradient-bar"></div>
@@ -25,12 +25,26 @@
         </div>
     </div>
     <div class="test2">
-        Like my project? please consider supporting me by clicking the link below. Thank you... 
+        <h2>How Does it work?</h2>
+        <p>So originally i wanted to make a perlin noise implimentation, which is basically the same thing made by the same guy but it users triangular grids rather than cubic grid.</p>
+        <p>This makes the computation way faster the Big O goes from O(2n) to 0(n), which basically means that a 2D grid calculation takes no more than 2 times the calculation of 1D grid. For contrast a 2D perline noise would take 4 times the calculations as compaired to 1D perline noise.</p>
+        <p>The render that you are seeing is a 3D calculation on a canvas of 400/400 pixels. Before switching to simplex i gave perline a try, the animation was very studdery "can't be low fps right" then i noticed my laptop was actually getting hot rendering this. Turns out my intel UHD620 was too slow for it.</p>
+        <p>This is when i came across other noise function(Yes there are many) Simplex was one of the and it was made by the same guy. I saw curl noise which is just most amazing looking noise render but too difficult for me so simplex it is.</p>
+        <p>Someone actually made the simplex algo in vanilla javascript and there you go a 3D simplex noise render in vanilla javascript.</p> <br>
+        <h2>Things i have in mind</h2>
+        <p>So noise rendering is cool and all but it is not special everyone has made a noise render but i want this to be a little more special so i want to impliment the followling in the future</p>
+            <ul>
+            <li>Image download, wallpaper engine be dammed</li>
+            <li>Speed control, missed your favourite part? just rewind to it</li>
+            <li>CDN link generation, want to use this render but videos are not random? Just click the link btn and it generates a CDN with the gradient that you set up.</li>
+            </ul><br>
+        <h2>Want to see this through?</h2>
+        <p>This is a passion project for me and it is almost impossible for me to juggle my job, my studies and my projects at once, if you fell like this is actually something worth your time please consider supporting me.... <b>Thank You</b></p> <br>
     <form action="https://coff.ee/samrat_079">
-        <button type="submit">Buy me a coffee</button>
+        <button type="submit">☕Buy me a coffee</button>
     </form>
     </div>
 <script src="simplex.js"></script>
-<script type="module" src="canvas.js"></script>
+<script class="coffee" type="module" src="canvas.js"></script>
 </body>
 </html>
